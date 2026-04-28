@@ -2,12 +2,16 @@
 
 import axios from 'axios';
 
+axios.defaults.baseURL = 'https://69f0a537c1533dbedc9d7348.mockapi.io';
+
 export const getAllTasks = () => {
-  return axios.get('https://69f0a537c1533dbedc9d7348.mockapi.io/todo');
+  return axios.get('/todo');
 };
 
 export const createNewTask = task => {
-  return axios.post(`https://69f0a537c1533dbedc9d7348.mockapi.io/todo`, task);
+  return axios.post(`/todo`, task);
 };
 
-export const deleteTaskById = taskId => {};
+export const deleteTaskById = taskId => {
+  return axios.delete(`/todo/${taskId}`);
+};

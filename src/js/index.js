@@ -1,4 +1,4 @@
-import { getAllTasks, createNewTask } from './tasks-api';
+import { getAllTasks, createNewTask, deleteTaskById } from './tasks-api';
 import { createTaskCardTemplate } from './render-functions';
 import { refs } from './refs';
 
@@ -78,6 +78,26 @@ const onDeleteBtnList = event => {
   if (!taskDeleteBtnEl) {
     return;
   }
-  console.log(taskDeleteBtnEl);
+  //   console.log(taskDeleteBtnEl);
+  // прочитать id к какой кнопке он привязан, чтобы удалять
+  const currentTaskId = taskDeleteBtnEl.dataset.taskId;
+  //   console.log(currentTaskId);
+  // формируем запыт на удаление и отправчляем
+  deleteTaskById(currentTaskId)
+    .then(response => {
+      iziToast.success({
+        message: 'Задача удалена успешно',
+        position: 'topRight',
+      });
+      // перерисовываем уже с удаленными
+      initTasksList();
+    })
+    .catch(err => {
+      iziToast.error({
+        message: 'Произошла ошибка при удалении',
+        position: 'topRight',
+      });
+    });
 };
+
 refs.taskList.addEventListener('click', onDeleteBtnList);
