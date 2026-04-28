@@ -37,3 +37,9 @@
 .task-form-sbmt-btn:focus {
   background-color: rgb(78 168 222);
 }
+
+button:disabled {
+  background-color: #ccc;
+  color: #888;
+  cursor: not-allowed;
+}
