@@ -101,3 +101,5 @@ const onDeleteBtnList = event => {
 };
 
 refs.taskList.addEventListener('click', onDeleteBtnList);
+
+// делаем прелоадер загрузки тасков

@@ -3,4 +3,5 @@ export const refs = {
   taskList: document.querySelector('.js-tasks-list'),
   taskFormSbmtBtn: document.querySelector('.js-form-sbmt-btn'),
   taskDeletedBtn: document.querySelector('.js-tasks-list-item-delete-btn'),
+  loader: document.querySelector('.js-loader'),
 };
