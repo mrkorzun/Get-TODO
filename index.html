@@ -1,0 +1,56 @@
+<!doctype html>
+
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&display=swap"
+      rel="stylesheet"
+    />
+
+    <script type="module" crossorigin src="/Get-TODO/index.js"></script>
+    <link rel="modulepreload" crossorigin href="/Get-TODO/assets/vendor-BgQWO4R4.js">
+    <link rel="stylesheet" crossorigin href="/Get-TODO/assets/vendor-DnveWo0P.css">
+    <link rel="stylesheet" crossorigin href="/Get-TODO/assets/index-PDWLmFWm.css">
+  </head>
+  <body>
+    <header class="page-header">
+  <div class="container">
+    <nav class="page-nav">
+      <a class="page-logo" href="#">
+        <svg class="page-logo-icon" width="22" height="36">
+          <use href="../img/icons.svg#icon-logo"></use>
+        </svg>
+        <span class="page-logo-text">To<span>Do</span></span>
+      </a>
+    </nav>
+  </div>
+</header>
+
+
+    <main>
+      <section class="task-form-section">
+  <div class="container">
+    <form class="task-form js-task-form" autocomplete="off">
+      <input class="task-form-field" type="text" name="task_text" placeholder="Enter task text" />
+      <button class="task-form-sbmt-btn js-form-sbmt-btn" type="submit">Create</button>
+    </form>
+  </div>
+</section>
+
+      <section class="tasks-list-section">
+  <div class="container">
+    <h1 class="visually-hidden">Todo list</h1>
+    <ul class="tasks-list js-tasks-list"></ul>
+    <span class="loader js-loader"></span>
+  </div>
+</section>
+
+    </main>
+  </body>
+</html>
