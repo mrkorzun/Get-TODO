@@ -48,12 +48,17 @@ const onTaskFormSubmit = event => {
         message: 'Задача созданна успешно',
         position: 'topRight',
       });
+      // чистим форму
+      taskFormEl.reset();
+      // перерисовываем список
+      initTasksList();
     })
     .catch(err => {
       iziToast.error({
-        message: 'Сталась ошибка при создании',
+        message: 'Произошла ошибка при создании',
         position: 'topRight',
       });
+
       console.log(err);
     }) // включаем кнопку
     .finally(() => {
