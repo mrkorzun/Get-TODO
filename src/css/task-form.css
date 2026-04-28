@@ -1,0 +1,39 @@
+.task-form-section {
+  padding-top: 60px;
+  padding-bottom: 60px;
+}
+
+.task-form {
+  display: flex;
+  column-gap: 16px;
+}
+
+.task-form-field {
+  height: 54px;
+  flex-grow: 1;
+  border: 1px solid rgb(13 13 13);
+  border-radius: 8px;
+  padding-left: 16px;
+  padding-right: 16px;
+  background-color: rgb(38 38 38);
+  color: rgb(255 255 255);
+}
+
+.task-form-field::placeholder {
+  color: rgb(128 128 128);
+}
+
+.task-form-sbmt-btn {
+  min-width: 90px;
+  border: none;
+  border-radius: 8px;
+  padding: 16px 8px;
+  background-color: rgb(30 111 159);
+  color: rgb(242 242 242);
+  transition: background-color 250ms linear;
+}
+
+.task-form-sbmt-btn:hover,
+.task-form-sbmt-btn:focus {
+  background-color: rgb(78 168 222);
+}

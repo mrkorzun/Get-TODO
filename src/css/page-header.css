@@ -1,0 +1,23 @@
+.page-header {
+  padding-top: 40px;
+  padding-bottom: 40px;
+  background-color: rgb(13 13 13);
+}
+
+.page-nav {
+  display: flex;
+  justify-content: center;
+}
+
+.page-logo {
+  display: inline-flex;
+  align-items: center;
+  column-gap: 12px;
+  font-weight: 900;
+  font-size: 40px;
+  color: rgb(78 168 222);
+}
+
+.page-logo-text span {
+  color: rgb(94 96 206);
+}

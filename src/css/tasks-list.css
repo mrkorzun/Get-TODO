@@ -1,0 +1,33 @@
+.tasks-list {
+  display: flex;
+  flex-direction: column;
+  row-gap: 16px;
+}
+
+.tasks-list-item {
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-start;
+  column-gap: 16px;
+  width: 100%;
+  padding: 32px;
+  box-shadow: 0 2px 8px 0 rgb(0 0 0 / 0.06);
+  background: rgb(38 38 38);
+  border: 1px solid #333;
+  border-radius: 8px;
+  line-height: 1.4;
+}
+
+.tasks-list-item-delete-btn {
+  line-height: 0;
+  border: none;
+  background-color: transparent;
+  padding: 0;
+  fill: rgb(128 128 128);
+  transition: fill 250ms linear;
+}
+
+.tasks-list-item-delete-btn:hover,
+.tasks-list-item-delete-btn:focus {
+  fill: rgb(226 88 88);
+}
