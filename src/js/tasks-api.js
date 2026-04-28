@@ -2,7 +2,9 @@
 
 import axios from 'axios';
 
-export const getAllTasks = () => {};
+export const getAllTasks = () => {
+  return axios.get('https://69f0a537c1533dbedc9d7348.mockapi.io/todo');
+};
 
 export const createNewTask = taskText => {};
 
