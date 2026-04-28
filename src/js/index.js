@@ -67,3 +67,11 @@ const onTaskFormSubmit = event => {
 };
 
 refs.taskForm.addEventListener('submit', onTaskFormSubmit);
+
+// делаем делегирорвания ивента клик на найближайшему предку
+const onDeleteBtnList = event => {
+  //   console.log('click');
+  // нужно сделать клик только по кнопке
+  //   console.log(event.target);
+};
+refs.taskList.addEventListener('click', onDeleteBtnList);
