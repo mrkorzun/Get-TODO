@@ -3,6 +3,7 @@
 <p align="center">
   <img src="./screenshot.jpg" alt="Preview" width="900">
 </p>
+
 > Навчальний проєкт у межах курсу [GoIT](https://goit.global/) — простий менеджер задач (todo-list) із синхронізацією на
 > сервер через REST API.
 
