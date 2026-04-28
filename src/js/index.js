@@ -6,6 +6,10 @@ import iziToast from 'izitoast';
 import 'izitoast/dist/css/iziToast.min.css';
 
 const initTasksList = () => {
+  // чистим форму
+  refs.taskList.innerHTML = '';
+  // делаем прелоадер загрузки тасков
+  refs.loader.classList.add('is-active');
   getAllTasks()
     .then(({ data: tasksArr }) => {
       const tasksCardTemplate = tasksArr.map(task => createTaskCardTemplate(task)).join('');
@@ -15,6 +19,9 @@ const initTasksList = () => {
     })
     .catch(err => {
       console.log(err);
+    })
+    .finally(() => {
+      refs.loader.classList.remove('is-active');
     });
 };
 
@@ -101,5 +108,3 @@ const onDeleteBtnList = event => {
 };
 
 refs.taskList.addEventListener('click', onDeleteBtnList);
-
-// делаем прелоадер загрузки тасков
