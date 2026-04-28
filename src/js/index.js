@@ -74,6 +74,10 @@ const onDeleteBtnList = event => {
   // нужно сделать клик только по кнопке, поэтмоу ищем ее
   //   console.log(event.target);
   const taskDeleteBtnEl = event.target.closest('.js-tasks-list-item-delete-btn');
-  //   console.log(taskDeleteBtnEl);
+  // ничего не выводить если клик не по кнопке
+  if (!taskDeleteBtnEl) {
+    return;
+  }
+  console.log(taskDeleteBtnEl);
 };
 refs.taskList.addEventListener('click', onDeleteBtnList);
