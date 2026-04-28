@@ -71,7 +71,9 @@ refs.taskForm.addEventListener('submit', onTaskFormSubmit);
 // делаем делегирорвания ивента клик на найближайшему предку
 const onDeleteBtnList = event => {
   //   console.log('click');
-  // нужно сделать клик только по кнопке
+  // нужно сделать клик только по кнопке, поэтмоу ищем ее
   //   console.log(event.target);
+  const taskDeleteBtnEl = event.target.closest('.js-tasks-list-item-delete-btn');
+  //   console.log(taskDeleteBtnEl);
 };
 refs.taskList.addEventListener('click', onDeleteBtnList);
