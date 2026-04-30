@@ -4,14 +4,17 @@ import axios from 'axios';
 
 axios.defaults.baseURL = 'https://69f0a537c1533dbedc9d7348.mockapi.io';
 
-export const getAllTasks = () => {
-  return axios.get('/todo');
+export const getAllTasks = async () => {
+  const { data } = await axios.get('/todo');
+  return data;
 };
 
-export const createNewTask = task => {
-  return axios.post(`/todo`, task);
+export const createNewTask = async task => {
+  const { data } = await axios.post(`/todo`, task);
+  return data;
 };
 
-export const deleteTaskById = taskId => {
-  return axios.delete(`/todo/${taskId}`);
+export const deleteTaskById = async taskId => {
+  const { data } = await axios.delete(`/todo/${taskId}`);
+  return data;
 };
